@@ -1,0 +1,14 @@
+
+  <div>
+  <h3>Battleship Game</h3>
+
+  <table>
+    <tr *ngFor="let row of gameBoard; let i = index">
+        <td *ngFor="let cell of row; let j = index"
+        [class.ship]="cell !== 0"
+        [class.selected]="isSelected(i, j)"
+        (click)="placeShip(i, j)">
+        </td>
+    </tr>
+  </table>
+</div>

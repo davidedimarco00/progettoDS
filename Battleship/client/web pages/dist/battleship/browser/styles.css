@@ -1,0 +1,33 @@
+/* src/styles.css */
+h1 {
+  text-align: center;
+}
+.table-container {
+  display: inline-block;
+}
+.tables-container {
+  text-align: center;
+}
+table {
+  border-collapse: collapse;
+  width: 60%;
+  margin: 10px;
+}
+th,
+td {
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
+th {
+  background-color: #f2f2f2;
+}
+td {
+  cursor: pointer;
+}
+td.clicked {
+  background-color: lightslategray;
+}
+
+/* angular:styles/global:styles */
+/*# sourceMappingURL=styles.css.map */

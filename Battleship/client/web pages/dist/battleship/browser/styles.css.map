@@ -1,0 +1,7 @@
+{
+  "version": 3,
+  "sources": ["src/styles.css"],
+  "sourcesContent": ["/* You can add global styles to this file, and also import other style files */\r\n\r\nh1 {\r\n  text-align: center;\r\n}\r\n .table-container {\r\n      display: inline-block;\r\n    }\r\n\r\n\r\n    .tables-container {\r\n      text-align: center;\r\n    }\r\n\r\n    table {\r\n      border-collapse: collapse;\r\n      width: 60%;\r\n      margin: 10px;\r\n    }\r\n  th, td {\r\n    border: 1px solid #ddd;\r\n    padding: 20px;\r\n    text-align: center;\r\n  }\r\n\r\n  th {\r\n    background-color: #f2f2f2;\r\n  }\r\n\r\n  td {\r\n    cursor: pointer;\r\n  }\r\n\r\n  td.clicked {\r\n    background-color: lightslategray; /* Change the color as needed */\r\n  }\r\n  "],
+  "mappings": ";AAEA;AACE,cAAY;AACd;AACC,CAAC;AACI,WAAS;AACX;AAGA,CAAC;AACC,cAAY;AACd;AAEA;AACE,mBAAiB;AACjB,SAAO;AACP,UAAQ;AACV;AACF;AAAI;AACF,UAAQ,IAAI,MAAM;AAClB,WAAS;AACT,cAAY;AACd;AAEA;AACE,oBAAkB;AACpB;AAEA;AACE,UAAQ;AACV;AAEA,EAAE,CAAC;AACD,oBAAkB;AACpB;",
+  "names": []
+}

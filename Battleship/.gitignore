@@ -1,0 +1,93 @@
+# Created by https://www.gitignore.io/api/java,gradle
+
+### Java ###
+*.class
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.ear
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+
+#####angular####
+
+#vscode
+
+.gradle/8.2/executionHistory/
+/.vscode/
+
+.vscode/
+
+.angular/
+.angular/cache/
+/.angular/
+/.angular/cache/
+### Gradle ###
+.gradle
+/build/
+/.gradle/
+**/.gradle/8.2/
+.gradle/
+/.gradle/
+
+###intelliJ###
+# User-specific stuff:
+.idea
+.idea/
+.idea/workspace.xml
+.idea/tasks.xml
+.idea/dictionaries
+.idea/vcs.xml
+.idea/jsLibraryMappings.xml
+**.idea/
+/.idea/
+
+
+# Sensitive or high-churn files:
+.idea/dataSources.ids
+.idea/dataSources.xml
+.idea/dataSources.local.xml
+.idea/sqlDataSources.xml
+.idea/dynamic.xml
+.idea/uiDesigner.xml
+
+### Node ###
+.node_modules
+node_modules
+/node_modules/ 
+
+### Idea ###
+.idea
+
+#####
+client/.DS_Store
+.DS_Store
+
+# Ignore Gradle GUI config
+gradle-app.setting
+
+# Avoid ignoring Gradle wrapper jar file (.jar files are usually ignored)
+!gradle-wrapper.jar
+
+# Cache of project
+.gradletasknamecache
+
+# # Work around https://youtrack.jetbrains.com/issue/IDEA-116898
+# gradle/wrapper/gradle-wrapper.properties
+
+# End of https://www.gitignore.io/api/java,gradle
+
+**common/build/
+**presentation/build/
+**server/build/
+**websocket/build/
+**test/build/
+**client/build/

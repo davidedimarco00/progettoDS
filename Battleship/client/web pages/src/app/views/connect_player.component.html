@@ -1,0 +1,11 @@
+ <h2>Choose your nickname</h2>
+
+    <form (submit)="login()">
+      <div>
+        <input type="text" id="nickname" name="nickname" [(ngModel)]="player.username" placeholder="nickname" >
+      </div>
+
+
+      <button type="submit">Start</button>
+    </form>
+
