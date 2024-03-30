@@ -1,0 +1,15 @@
+
+  <div>
+  <h3>Battleship Game</h3>
+
+    <table>
+      <tr *ngFor="let row of gameBoard; let i = index">
+        <td *ngFor="let cell of row; let j = index"
+            [class.ship]="cell !== 0">
+        </td>
+      </tr>
+    </table>
+
+    <button (click)="generateNewPositions()">Generate New Positions</button>
+    <button (click)="savePositions()">Start</button>
+</div>

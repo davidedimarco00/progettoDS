@@ -1,0 +1,54 @@
+
+    <div class="tables-container">
+    <div class="table-container">
+    <table>
+    <caption>Your Grid</caption>
+    <thead>
+    <tr>
+      <th></th>
+      <th *ngFor="let column of columns">{{ column }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <th>{{ row }}</th>
+      <td *ngFor="let column of columns"
+          [ngStyle]="{'background-color': getCellColor(row + column)}"
+
+          id="{{ row + column }}">
+</td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+
+
+    <div class="table-container">
+    <table class="table-container">
+    <caption>Battle Grid</caption>
+    <thead>
+    <tr>
+      <th></th>
+      <th *ngFor="let column of columns">{{ column }}</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let row of rows">
+      <th>{{ row }}</th>
+      <td *ngFor="let column of columns" id="{{ row + column }}" (click)="toggleCellClick(row + column)"  [class.clicked]="isCellClicked(row + column)"></td>
+    </tr>
+  </tbody>
+</table>
+    </div>
+    </div>
+
+    <div *ngIf="hits.length > 0">
+  <h2>Hits List:</h2>
+  <p>Your hits: {{ hits.join(', ') }}</p><p>Hits recived: {{ hits_recived.join(', ') }}</p>
+</div>
+    <router-outlet></router-outlet>
+
+      isCellClicked(coordinates: string): boolean {
+        return this.clickedCells.includes(coordinates);
+      }
+}
