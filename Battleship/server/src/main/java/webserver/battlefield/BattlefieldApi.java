@@ -20,4 +20,6 @@ public interface BattlefieldApi {
     CompletableFuture<List<Map<Lobby, Battlefield>>> getBattlefields();
 
     CompletableFuture<Battlefield> getBattlefieldById(Integer integer);
+
+    CompletableFuture<Battlefield> getBattlefieldByLobbyId(Integer integer);
 }

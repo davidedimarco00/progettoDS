@@ -27,6 +27,7 @@ public class BattlefieldControllerImpl extends AbstractController implements Bat
         app.post(path("/"), this::postPlayerShips);
         app.get(path("/"), this::getBattlefields);
         app.get(path("/{battlefieldId}"), this::getBattlefieldById);
+        app.get(path("/lobby/{lobbyId}"), this::getBattlefieldByLobbyId);
     }
 
     @Override
@@ -53,6 +54,16 @@ public class BattlefieldControllerImpl extends AbstractController implements Bat
 
         var content = context.bodyAsClass(PlayerShip.class);
         var futureResult = api.addShipToBattlefield(content);
+        asyncReplyWithBody(context, "application/json", futureResult);
+
+    }
+
+    @Override
+    public void getBattlefieldByLobbyId(Context context) throws HttpResponseException {
+        BattlefieldApi api = getApi(context);
+
+        var lobbyId = context.pathParam("{lobbyId}");
+        var futureResult = api.getBattlefieldByLobbyId(Integer.valueOf(lobbyId));
         asyncReplyWithBody(context, "application/json", futureResult);
 
     }

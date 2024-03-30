@@ -55,4 +55,16 @@ public class BattlefieldApiImpl extends AbstractApi implements BattlefieldApi {
                     }
                 });
     }
+
+    @Override
+    public CompletableFuture<Battlefield> getBattlefieldByLobbyId(Integer lobbyId) {
+        return CompletableFuture.supplyAsync(
+                () -> {
+                    try {
+                        return storage().getBattlefieldByLobbyId(lobbyId);
+                    }catch (MissingException e){
+                        throw new NotFoundResponse();
+                    }
+                });
+    }
 }

@@ -223,5 +223,17 @@ public class LocalBattleship implements Battleship {
         throw new MissingException("Il campo di battaglia con ID " + battlefieldId + " non è stato trovato.");
     }
 
-
+    @Override
+    public Battlefield getBattlefieldByLobbyId(Integer lobbyId) throws MissingException {
+        for (Map<Lobby, Battlefield> lobbyBattlefieldMap : battlefields) {
+            for (Map.Entry<Lobby, Battlefield> entry : lobbyBattlefieldMap.entrySet()) {
+                Lobby lobby = entry.getKey();
+                Battlefield battlefield = entry.getValue();
+                if (lobby.getId() == lobbyId) {
+                    return battlefield;
+                }
+            }
+        }
+        throw new MissingException("Il campo di battaglia con ID " + lobbyId + " non è stato trovato.");
+    }
 }

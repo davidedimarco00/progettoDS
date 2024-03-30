@@ -70,39 +70,6 @@ public interface BattlefieldController extends Controller {
     )
     void getBattlefieldById(Context context) throws HttpResponseException;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
     /**
      * POST
      * This EndPoint adds a new lobby identified by an ID to the game
@@ -136,6 +103,40 @@ public interface BattlefieldController extends Controller {
     )
     void postPlayerShips(Context context) throws HttpResponseException;
 
+    /**
+     * GET
+     * Get battlefield by id passed in path param
+     * */
+    @OpenApi(
+            operationId = "LobbyApi::getBattlefieldByLobbyId",
+            path = BattleshipService.BASE_URL + "/battlefield/lobby/{lobbyId}",
+            methods = {HttpMethod.GET},
+            tags = {"battlefield"},
+            description = "Get the battlefield by lobbyId passed in the path.",
+            pathParams = {
+                    @OpenApiParam(
+                            name = "lobbyId",
+                            type = Integer.class,
+                            description = "Id of the lobby",
+                            required = true
+                    )
+            },
+            responses = {
+                    @OpenApiResponse(
+                            status = "200",
+                            description = "The provided id corresponds to a lobby, the battelfild exist, nothing is returned"
+                    ),
+                    @OpenApiResponse(
+                            status = "404",
+                            description = "Not found: the provided id corresponds to not existing battlefield"
+                    ),
+                    @OpenApiResponse(
+                            status = "409",
+                            description = "Conflict: the lobby is full"
+                    )
+            }
+    )
+    void getBattlefieldByLobbyId(Context context) throws HttpResponseException;
 
 
 }

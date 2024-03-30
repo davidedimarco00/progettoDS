@@ -52,4 +52,6 @@ public interface Battleship {
     List<Map<Lobby, Battlefield>> getBattlefields();
 
     Battlefield getBattlefieldById(Integer battlefieldId) throws MissingException;
+
+    Battlefield getBattlefieldByLobbyId(Integer lobbyId) throws MissingException;
 }
