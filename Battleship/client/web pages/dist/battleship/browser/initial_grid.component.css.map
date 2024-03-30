@@ -1,7 +1,0 @@
-{
-  "version": 3,
-  "sources": ["angular:styles/component:css;6fd2670690d3a29299c073b7b61c17f3c971ecf04ae091cbed9e74ac56d0299a;C:/Users/DAVIDE/Desktop/ds-project-dimarco-fraccalvieri-ay2324/Battleship/client/web pages/src/app/features/initial_grid.component.ts"],
-  "sourcesContent": ["\n    table {\n        border-collapse: collapse;\n      }\n      \n      td {\n        width: 30px;\n        height: 30px;\n        border: 1px solid black;\n        text-align: center;\n      }\n      \n      .ship {\n        background-color: gray;\n      }\n      \n      .selected {\n        background-color: lightblue;\n      }\n      "],
-  "mappings": ";AACI;AACI,mBAAiB;AACnB;AAEA;AACE,SAAO;AACP,UAAQ;AACR,UAAQ,IAAI,MAAM;AAClB,cAAY;AACd;AAEA,CAAC;AACC,oBAAkB;AACpB;AAEA,CAAC;AACC,oBAAkB;AACpB;",
-  "names": []
-}
