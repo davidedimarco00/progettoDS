@@ -18,13 +18,13 @@ export class WebsocketComponent implements OnInit {
   ws: WebSocket;
 
   constructor() {
-    this.ws = new WebSocket("ws://" + location.hostname + ":" + location.port + "/chat");
+    this.ws = new WebSocket("ws://localhost:7070/chat");
     this.ws.onmessage = (msg) => this.updateChat(msg);
     this.ws.onclose = () => alert("WebSocket connection closed");
   }
 
   ngOnInit(): void {
-    this.ws = new WebSocket("ws://" + location.hostname + ":" + location.port + "/chat");
+    this.ws = new WebSocket("ws://localhost:7070/chat");
     this.ws.onmessage = (msg) => this.updateChat(msg);
     this.ws.onclose = () => alert("WebSocket connection closed");
   }

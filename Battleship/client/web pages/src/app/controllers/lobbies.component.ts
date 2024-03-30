@@ -42,7 +42,7 @@ export class LobbiesComponent {
   }
 
   async getLobbies(): Promise<void> {
-    for (let i = 0; i < 10; i++) {
+    for (let i = 0; i < 1; i++) {
       await interval(1000).pipe(
         take(1),
         switchMap(() => this.http.get<Lobby[]>("/battleship/v1.0/lobbies"))
