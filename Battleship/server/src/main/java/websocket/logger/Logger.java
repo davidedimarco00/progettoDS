@@ -1,4 +1,4 @@
-package websocket;
+package websocket.logger;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;

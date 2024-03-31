@@ -1,13 +1,10 @@
-package websocket;
+package websocket.connection;
 
 import io.javalin.Javalin;
-import io.javalin.websocket.WsConfig;
-import io.javalin.websocket.WsContext;
+import websocket.messaging.MessageHandler;
+import websocket.messaging.MessageHandlerImpl;
 
 import java.util.List;
-import java.util.Map;
-import java.util.concurrent.ConcurrentHashMap;
-import java.util.function.Consumer;
 
 public class ConnectionHandlerImpl implements ConnectionHandler {
 
@@ -26,10 +23,8 @@ public class ConnectionHandlerImpl implements ConnectionHandler {
 
     @Override
     public void configure() {
-
         for (Path path : this.paths) {
             String pathName = path.getPathName();
-
             this.app.ws(pathName, ws -> {
                 ws.onConnect(ctx ->  {
                     switch (pathName) {
@@ -42,7 +37,6 @@ public class ConnectionHandlerImpl implements ConnectionHandler {
                             break;
                     }
                 });
-
                 ws.onClose(ctx -> {
                     switch (pathName) {
                         case "/attack":
@@ -54,11 +48,9 @@ public class ConnectionHandlerImpl implements ConnectionHandler {
                             break;
                     }
                 });
-
                 ws.onMessage(ctx -> {
                     //broadcastMessage(userUsernameMap.get(ctx), ctx.message());
                 });
-
             });
         }
     }

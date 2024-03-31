@@ -1,4 +1,4 @@
-package websocket;
+package websocket.messaging;
 
 import common.Player;
 import io.javalin.websocket.WsContext;

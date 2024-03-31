@@ -1,4 +1,4 @@
-package websocket;
+package websocket.connection;
 
 public class Path {
     private final String pathName;

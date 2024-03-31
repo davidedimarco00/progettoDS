@@ -1,8 +1,10 @@
-package websocket;
+package websocket.messaging;
 
 
 import common.Player;
 import io.javalin.websocket.WsContext;
+import websocket.logger.Logger;
+import websocket.messaging.MessageHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
