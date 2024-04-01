@@ -25,14 +25,16 @@ public class BattleshipWebSocket {
             config.staticFiles.add("/time", Location.CLASSPATH);
         }).start(port);
 
-        //create a connection handler configurator for the app that handle all websocket path (paths)
-        List<Path> pathList = new ArrayList<>();
-        pathList.add(new Path("/notification"));
-        pathList.add(new Path("/chat"));
 
+        //create a connection handler configurator for the app that handle all websocket endpoint (paths)
+        List<Path> pathList = new ArrayList<>();
+        pathList.add(new Path("/connection"));
+        pathList.add(new Path("/lobby"));
+        pathList.add(new Path("/battlefield"));
+        pathList.add(new Path("/game"));
 
         ConnectionHandler connectionHandler = new ConnectionHandlerImpl(app, pathList);
-        connectionHandler.configure();git 
+        connectionHandler.configure();
     }
 
 
