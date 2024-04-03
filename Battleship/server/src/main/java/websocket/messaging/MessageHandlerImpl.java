@@ -1,8 +1,10 @@
-package websocket;
+package websocket.messaging;
 
 
 import common.Player;
 import io.javalin.websocket.WsContext;
+import websocket.logger.Logger;
+import websocket.messaging.MessageHandler;
 
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -14,7 +16,6 @@ import static j2html.TagCreator.*;
 public class MessageHandlerImpl implements MessageHandler {
 
     private static final Map<WsContext, String> connectedClientMap = new ConcurrentHashMap<>(); //the list of all connected client
-    private Logger logger = new Logger();
 
     @Override
     public void sendMessageToPlayer(Player player, String message) {
